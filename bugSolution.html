@@ -1,0 +1,8 @@
+<p>The solution involves using optional chaining and nullish coalescing operators to handle the case where the `user` object or its `name` property might be `null` or `undefined`. This prevents the error from occurring.</p><pre><code class="language-javascript">
+async function displayUserName() {
+  const user = await fetchUserData();
+  document.getElementById('userName').textContent = user?.name ?? 'Guest'; // Safe access with optional chaining and nullish coalescing
+}
+
+displayUserName();
+</code></pre>
