@@ -1,0 +1,7 @@
+<p>This is a common error that occurs when a script attempts to access a property of an object that is null or undefined.  This often occurs when dealing with asynchronous operations, where the object may not have been fully loaded when the property is accessed.  In the example below, the `user` object might be `null` initially. The program tries to access `user.name` before the asynchronous operation (e.g., fetching user data from the server) completes.</p><pre><code class="language-javascript">async function displayUserName() {
+  const user = await fetchUserData(); // Fetching user data asynchronously
+  document.getElementById('userName').textContent = user.name; // Accessing user.name before user is loaded
+}
+
+displayUserName();
+</code></pre>
